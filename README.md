@@ -1,12 +1,16 @@
 # Coding with Speech Recognition
 
+The aim of this project is to provide recognition and translation of spoken language into text by computers and using these processes in coding.
+
 # Requirements
 
-* Speech Recognition 3.2
-* PyAudio
-* NLTK
+* [Speech Recognition 3.3.0](https://pypi.python.org/pypi/SpeechRecognition/)
+* [PyAudio](https://pypi.python.org/pypi/SpeechRecognition/)
+* [NLTK](http://www.nltk.org/)
 
 # Run
+
+* not available yet
 
 # Project Development Steps
 
