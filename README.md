@@ -1,6 +1,6 @@
 # Coding with Speech Recognition
 
-The aim of this project is to provide recognition and translation of spoken language into text by computers and using these processes in coding.
+The aim of this project is to provide recognition and translation of spoken language into text by computers and using these processes for coding.
 
 # Requirements
 
