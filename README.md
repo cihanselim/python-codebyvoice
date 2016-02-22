@@ -14,3 +14,6 @@ The aim of this project is to provide recognition and translation of spoken lang
 
 # Project Development Steps
 
+* Installing the necessary tools,
+* Experimenting on the tools with the code editor,
+* Determining the next requirements and drawing a new path. (to be added)
