@@ -17,4 +17,3 @@ The aim of this project is to provide recognition and translation of spoken lang
 * Preparing the tools to listen our voices,
 * Creating Stop/Start listening commands,
 * Determining the next requirements and drawing a new path. (to be added)
-* deneme123alibolek
