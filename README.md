@@ -9,11 +9,10 @@ The aim of this project is to provide recognition and translation of spoken lang
 
 # Run
 
-* not available yet
+* python backgroundListener.py
 
 # Project Development Steps
 
-* Installing the necessary tools,
-* Preparing the tools to listen our voices,
-* Creating Stop/Start listening commands,
-* Determining the next requirements and drawing a new path. (to be added)
+* Installing the necessary tools
+* Stop/Start listening commands(maybe key press)
+* These steps will be updated week by week
