@@ -14,5 +14,7 @@ The aim of this project is to provide recognition and translation of spoken lang
 # Project Development Steps
 
 * Installing the necessary tools
-* Stop/Start listening commands(maybe key press)
+* Stop/Start listening commands;
+	- Say 'stop' to pause listening 
+	- Say 'start' to resume listening
 * These steps will be updated week by week
