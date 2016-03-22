@@ -13,8 +13,10 @@ The aim of this project is to provide recognition and translation of spoken lang
 
 # Project Development Steps
 
-* Installing the necessary tools
-* Stop/Start listening commands;
-	- Say 'stop' to pause listening 
-	- Say 'start' to resume listening
+* Tools are installed
+* Stop/Start listening keyboard events are created;
+	- F12 to stop
+	- F11 to start
+* A text-editor is created from using Tkinter library
+* Output is transported to this text-editor
 * These steps will be updated week by week
