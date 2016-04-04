@@ -19,4 +19,5 @@ The aim of this project is to provide recognition and translation of spoken lang
 	- F11 to start
 * A text-editor is created from using Tkinter library
 * Output is transported to this text-editor
+* Text editor is updated, it has Open,Save,Help menus now.
 * These steps will be updated week by week
