@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import speech_recognition as sr
 import ScrolledText
+import speech_recognition as sr
+
 from Tkinter import *
 import tkFileDialog
 import tkMessageBox
@@ -18,9 +19,18 @@ def startKey(event):
 
 def ifStatement():
     textPad.insert(INSERT, "if (): \n\t #if statement here\nelif (): \n\t #if statement here \nelse: \n\t #else statement here")
-
-def lowerThan():
+    getSpace()
+def lessThan():
     textPad.insert(INSERT, " < ")
+
+def greaterThan():
+    textPad.insert(INSERT, " > ")
+
+def bigEqual():
+    textPad.insert(INSERT, " >= ")
+
+def lowEqual():
+    textPad.insert(INSERT, " <= ")
 
 def newLine():
     textPad.insert(INSERT, "\n")
@@ -28,11 +38,18 @@ def newLine():
 def randomNum():
     textPad.insert(INSERT, "deneme = random.randint(1,10)")
 
-def space():
+def getSpace():
     textPad.insert(INSERT, " ")
 
-def printL(recognizer, audio):
-    textPad.insert(INSERT, "print \"%s\"" % (INSERT))
+def getTab():
+    textPad.insert(INSERT, "\t")
+
+def getPrint():
+    textPad.insert(INSERT, "print \"\"" )
+
+def standard_write(string):
+    textPad.insert(INSERT, string)
+    getSpace()
 
 def open_command():
         file = tkFileDialog.askopenfile(parent=root,mode='rb',title='Select a file')
@@ -55,7 +72,6 @@ def about_command():
 def exit_command():
     if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
         root.destroy()
-
 
 root = Tk()
 textPad = ScrolledText.ScrolledText(root, width=70, height=30, font=("Arial", 14, "normal"))
