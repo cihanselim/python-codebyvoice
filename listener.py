@@ -3,18 +3,31 @@
 
 from commands import *
 
-lst = [(u"kontrol", ifStatement),
-       (u"alta geç", newLine),
-       (u"küçüktür", lessThan),
-       (u"büyük eşittir", bigEqual),
-       (u"büyüktür", greaterThan),
-       (u"küçük eşittir", lowEqual),
-       (u"boşluk", getSpace),
-       (u"yazdır", getPrint),
-       (u"rastgele sayı", randomNum),
-       (u"paragraf", getTab)]
+lst = [(u"kontrol", ifStatement),    #0
+       (u"alta geç", newLine),       #1
+       (u"küçüktür", lessThan),      #2
+       (u"büyük eşittir", bigEqual), #3
+       (u"büyüktür", greaterThan),   #4
+       (u"küçük eşittir", lowEqual), #5
+       (u"boşluk", getSpace),        #6
+       (u"yazdır", getPrint),        #7
+       (u"rastgele sayı", randomNum),#8
+       (u"paragraf", getTab),        #9
+       (u"eşittir", equal),          #10
+       (u"eşitse", doubleEqual),     #11
+]
 
-listen = True
+listen=True
+
+def stopKey(event):
+    global listen
+    listen = False
+    print "Microphone has stopped."
+
+def startKey(event):
+    global listen
+    listen = True
+    print "Microphone has started."
 
 def callFSetI(indx, i):
     global lst
@@ -22,10 +35,9 @@ def callFSetI(indx, i):
     return (i+1)
 
 def callback(recognizer, audio):
-    global listen, lst
+    global listen, lst, sr
     try:
         if listen:
-            # a = recognizer.recognize_google(audio, language="tr")
             a = recognizer.recognize_google(audio, language="tr")
             words = a.lower().split()
             lstt = [s for s, f in lst]
@@ -55,7 +67,6 @@ def callback(recognizer, audio):
                     else:
                         standard_write(words[i])
                 else:
-                    # print words[i]
                     if words[i] == lst[0][0]:
                         lst[0][1]()
                     elif words[i] == lst[2][0]:
@@ -68,35 +79,33 @@ def callback(recognizer, audio):
                         lst[7][1]()
                     elif words[i] == lst[9][0]:
                         lst[9][1]()
+                    elif words[i] == lst[10][0]:
+                        lst[10][1]()
+                    elif words[i] == lst[11][0]:
+                        lst[11][1]()
                 i += 1
-        else:
-            listen = False
+        # else:
     except sr.UnknownValueError:
         print("waiting for a command...")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
 r = sr.Recognizer()
-r.energy_threshold = 4000
+r.energy_threshold = 1200
 r.pause_threshold = 0.5
 m = sr.Microphone()
 
 with m as source:
     r.adjust_for_ambient_noise(source)
-
 stop_listening = r.listen_in_background(m, callback)
-
-
 # Tkinter starts here
 textPad.quit()
 textPad.bind('<F12>', stopKey)
 textPad.bind('<F11>', startKey)
-
 # Modifications on editor
-root.wm_attributes("-alpha", 0.8)  # opacity
-root.resizable(False, True)  # editor enine buyumez, boyuna buyur
-root.wm_protocol("WM_DELETE_WINDOW", Tk)  # kapatmayi engeller
-
+root.wm_attributes("-alpha", 0.9)
+root.resizable(False, False)
+# root.wm_protocol("WM_DELETE_WINDOW", Tk)  # kapatmayi engeller
 # Editor menus here
 menu = Menu(root)
 root.config(menu=menu)

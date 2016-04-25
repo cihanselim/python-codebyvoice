@@ -7,30 +7,30 @@ from Tkinter import *
 import tkFileDialog
 import tkMessageBox
 
-def stopKey(event):
-    global listen
-    listen = False
-    print "Microphone has stopped."
-
-def startKey(event):
-    global listen
-    listen = True
-    print "Microphone has started."
-
 def ifStatement():
-    textPad.insert(INSERT, "if (): \n\t #if statement here\nelif (): \n\t #if statement here \nelse: \n\t #else statement here")
-    getSpace()
+    textPad.insert(INSERT, "if (): \t #if statement here\nelif (): \t "
+                           "#if statement here \nelse: \t #else statement here")
+
+def forLoop():
+    textPad.insert(INSERT, "for i in range():")
+
+def equal():
+    textPad.insert(INSERT, "= ")
+
+def doubleEqual():
+    textPad.insert(INSERT, "== ")
+
 def lessThan():
-    textPad.insert(INSERT, " < ")
+    textPad.insert(INSERT, "< ")
 
 def greaterThan():
-    textPad.insert(INSERT, " > ")
+    textPad.insert(INSERT, "> ")
 
 def bigEqual():
-    textPad.insert(INSERT, " >= ")
+    textPad.insert(INSERT, ">= ")
 
 def lowEqual():
-    textPad.insert(INSERT, " <= ")
+    textPad.insert(INSERT, "<= ")
 
 def newLine():
     textPad.insert(INSERT, "\n")
@@ -50,7 +50,6 @@ def getPrint():
 def standard_write(string):
     textPad.insert(INSERT, string)
     getSpace()
-
 def open_command():
         file = tkFileDialog.askopenfile(parent=root,mode='rb',title='Select a file')
         if file != None:
@@ -74,4 +73,5 @@ def exit_command():
         root.destroy()
 
 root = Tk()
-textPad = ScrolledText.ScrolledText(root, width=70, height=30, font=("Arial", 14, "normal"))
+textPad = ScrolledText.ScrolledText(root, width=100, height=40, font=("Consolas", 12, "normal"))
+textPad.config(background="#282828",foreground ="white",insertbackground="white")
