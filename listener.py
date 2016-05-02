@@ -15,8 +15,8 @@ lst = [(u"kontrol", ifStatement),    #0
        (u"paragraf", getTab),        #9
        (u"eşittir", equal),          #10
        (u"eşitse", doubleEqual),     #11
+       (u"kapat", closeT),           #12
 ]
-
 listen=True
 
 def stopKey(event):
@@ -83,25 +83,28 @@ def callback(recognizer, audio):
                         lst[10][1]()
                     elif words[i] == lst[11][0]:
                         lst[11][1]()
+                    elif words[i] == lst[12][0]:
+                        lst[12][1]()
                 i += 1
-        # else:
     except sr.UnknownValueError:
         print("waiting for a command...")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
 r = sr.Recognizer()
-r.energy_threshold = 1200
+r.energy_threshold = 500
 r.pause_threshold = 0.5
 m = sr.Microphone()
 
 with m as source:
     r.adjust_for_ambient_noise(source)
 stop_listening = r.listen_in_background(m, callback)
+
 # Tkinter starts here
 textPad.quit()
 textPad.bind('<F12>', stopKey)
 textPad.bind('<F11>', startKey)
+
 # Modifications on editor
 root.wm_attributes("-alpha", 0.9)
 root.resizable(False, False)

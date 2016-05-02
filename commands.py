@@ -36,7 +36,7 @@ def newLine():
     textPad.insert(INSERT, "\n")
 
 def randomNum():
-    textPad.insert(INSERT, "deneme = random.randint(1,10)")
+    textPad.insert(INSERT, "random.randint(1,10)")
 
 def getSpace():
     textPad.insert(INSERT, " ")
@@ -45,11 +45,15 @@ def getTab():
     textPad.insert(INSERT, "\t")
 
 def getPrint():
-    textPad.insert(INSERT, "print \"\"" )
+    textPad.insert(INSERT, "print \"" )
+
+def closeT():
+    textPad.insert(INSERT, "\"" )
 
 def standard_write(string):
     textPad.insert(INSERT, string)
     getSpace()
+
 def open_command():
         file = tkFileDialog.askopenfile(parent=root,mode='rb',title='Select a file')
         if file != None:
