@@ -1,29 +1,25 @@
-# Code by Voice
+# CODE BY VOICE
 
-The aim of this project is to provide recognition and translation of spoken language into text by computers and using these processes for coding.
+The aim of this project is using [speech recognition](https://en.wikipedia.org/wiki/Speech_recognition) for coding. It contains some templates to make coding easier.
 
 # Requirements
 
 * [Speech Recognition 3.2.0](https://pypi.python.org/pypi/SpeechRecognition/)
 * [PyAudio](https://pypi.python.org/pypi/SpeechRecognition/)
-* [Python Tkinter library] (http://effbot.org/tkinterbook/text.htm)
+* [Python Tkinter library](http://effbot.org/tkinterbook/text.htm)
 
 # Run
 
 * python listener.py
 
-# Project Development Steps
+# Change language
 
-* Tools were installed
-* A text-editor was created from using Tkinter library and some features were added; Save,Open,Help
-* Output was transported to this text-editor
-* Stop/Start keyboard events were created
-* Some automatic code templates were added
-* These steps will be updated week by week
+* The commands shown below are from Turkish lexicon. If you want to change language, go to listener.py file and change the language part to yours. (Of course you should also change the commands from Turkish to your language.)
+	![alt tag](https://raw.githubusercontent.com/chnselim/codebyvoice/master/demo/lang_pic.png)
 
-# How to Use - Commands in Turkish
+# How to Use
 
-* After executing listener.py;
+* python listener.py;
 	- F11 to pause, F12 to resume
 	- say "KONTROL" to get If/elif/else statement
 	- say "ALTA GEÇ" to get a new line
