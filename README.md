@@ -16,7 +16,7 @@ The aim of this project is using [speech recognition](https://en.wikipedia.org/w
 
 * The commands shown below are from Turkish lexicon. If you want to change language, go to listener.py file and change the language part to yours. (Of course you should also change the commands from Turkish to your language.)
 
-	![demo](https://raw.githubusercontent.com/chnselim/codebyvoice/master/demo/lang_pic.png)
+	![demao](https://raw.githubusercontent.com/chnselim/codebyvoice/master/demo/lang_pic.png)
 
 # How to Use
 
