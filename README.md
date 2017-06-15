@@ -1,5 +1,5 @@
-<h1 align="center"><img src="https://static1.textcraft.net/data1/a/d/ad436b6cdddce840fec206c6028aea0932225ff4da39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd807091ed61ed1189e10e32c9cca1c0399df41.png"></img><BR>
-<img src="https://static1.textcraft.net/data1/6/9/69a1adafdc6dff0304be5cc99d813d404b8feb2cda39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd807098743930d3c29474bd167c2af6aea0566.png"></img></h1>
+<h1 align="center"><img src="imgs/codebyvoice.png"></img><BR>
+<img src="imgs/codebyvoiceR.png"></img></h1>
 
 The aim of this project is using [speech recognition](https://en.wikipedia.org/wiki/Speech_recognition) for coding. It contains some templates to make coding easier.
 
